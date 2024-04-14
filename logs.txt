@@ -1,0 +1,373 @@
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271
+$ ^[[200~git remote add origin https://github.com/teddtsx/SI_2024_lab1_181271.git
+bash: $'\E[200~git': command not found
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271
+$ git remote add origin https://github.com/teddtsx/SI_2024_lab1_181271.git
+fatal: not a git repository (or any of the parent directories): .git
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271
+$ git init
+Initialized empty Git repository in D:/Fakultet/SI_2024_lab1_181271/.git/
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (master)
+$ git remote add origin https://github.com/teddtsx/SI_2024_lab1_181271.git
+
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (master)
+$ git brach -M master
+git: 'brach' is not a git command. See 'git --help'.
+
+The most similar command is
+        branch
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (master)
+$ git branch -M master
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (master)
+$ echo "# Teodor Cvetkovski 181271" >> README.md
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (master)
+$ git add .
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches t
+
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (master)
+$ git commit -m "initial commit"
+[master (root-commit) 26df320] initial commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (master)
+$ git add .
+warning: in the working copy of 'SILab1Main.java', LF will be replaced by CRLF the next time Git toches it
+warning: in the working copy of 'SILab1_1.java', LF will be replaced by CRLF the next time Git touces it
+warning: in the working copy of 'SILab1_2.java', LF will be replaced by CRLF the next time Git touces it
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (master)
+$ git commit -m "Add starter code"
+[master 58f82bd] Add starter code
+ 3 files changed, 47 insertions(+)
+ create mode 100644 SILab1Main.java
+ create mode 100644 SILab1_1.java
+ create mode 100644 SILab1_2.java
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (master)
+$ git push origin master
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (8/8), 1.12 KiB | 1.12 MiB/s, done.
+Total 8 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/teddtsx/SI_2024_lab1_181271.git
+ * [new branch]      master -> master
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (master)
+$ git add .
+warning: in the working copy of 'SILab1_1.java', LF will be replaced by CRLF the next time Git touces it
+warning: in the working copy of 'SILab1_2.java', LF will be replaced by CRLF the next time Git touces it
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (master)
+$ git reset
+Unstaged changes after reset:
+M       SILab1_1.java
+M       SILab1_2.java
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (master)
+$ git branch -b bug1
+error: unknown switch `b'
+usage: git branch [<options>] [-r | -a] [--merged] [--no-merged]
+   or: git branch [<options>] [-f] [--recurse-submodules] <branch-name> [<start-point>]
+   or: git branch [<options>] [-l] [<pattern>...]
+   or: git branch [<options>] [-r] (-d | -D) <branch-name>...
+   or: git branch [<options>] (-m | -M) [<old-branch>] <new-branch>
+   or: git branch [<options>] (-c | -C) [<old-branch>] <new-branch>
+   or: git branch [<options>] [-r | -a] [--points-at]
+   or: git branch [<options>] [-r | -a] [--format]
+
+Generic options
+    -v, --[no-]verbose    show hash and subject, give twice for upstream branch
+    -q, --[no-]quiet      suppress informational messages
+    -t, --[no-]track[=(direct|inherit)]
+                          set branch tracking configuration
+    -u, --[no-]set-upstream-to <upstream>
+                          change the upstream info
+    --[no-]unset-upstream unset the upstream info
+    --[no-]color[=<when>] use colored output
+    -r, --remotes         act on remote-tracking branches
+    --contains <commit>   print only branches that contain the commit
+    --no-contains <commit>
+                          print only branches that don't contain the commit
+    --[no-]abbrev[=<n>]   use <n> digits to display object names
+
+Specific git-branch actions:
+    -a, --all             list both remote-tracking and local branches
+    -d, --[no-]delete     delete fully merged branch
+    -D                    delete branch (even if not merged)
+    -m, --[no-]move       move/rename a branch and its reflog
+    -M                    move/rename a branch, even if target exists
+    --[no-]omit-empty     do not output a newline after empty formatted refs
+    -c, --[no-]copy       copy a branch and its reflog
+    -C                    copy a branch, even if target exists
+    -l, --[no-]list       list branch names
+    --[no-]show-current   show current branch name
+    --[no-]create-reflog  create the branch's reflog
+    --[no-]edit-description
+                          edit the description for the branch
+    -f, --[no-]force      force creation, move/rename, deletion
+    --merged <commit>     print only branches that are merged
+    --no-merged <commit>  print only branches that are not merged
+    --[no-]column[=<style>]
+                          list branches in columns
+    --[no-]sort <key>     field name to sort on
+    --[no-]points-at <object>
+                          print only branches of the object
+    -i, --[no-]ignore-case
+                          sorting and filtering are case insensitive
+    --[no-]recurse-submodules
+                          recurse through submodules
+    --[no-]format <format>
+                          format to use for the output
+
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (master)
+$ git branch bug1
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (master)
+$ git checkout bug1
+Switched to branch 'bug1'
+M       SILab1_1.java
+M       SILab1_2.java
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (bug1)
+$ git add SILab1_1.java
+warning: in the working copy of 'SILab1_1.java', LF will be replaced by CRLF the next time Git touces it
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (bug1)
+$ git commit -m "Fix wrong condition in filterOddLengthStrings"
+[bug1 94af544] Fix wrong condition in filterOddLengthStrings
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (bug1)
+$ git branch bug2
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (bug1)
+$ git checkout bug2
+Switched to branch 'bug2'
+M       SILab1_2.java
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (bug2)
+$ git add SILab1_2.java
+warning: in the working copy of 'SILab1_2.java', LF will be replaced by CRLF the next time Git touces it
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (bug2)
+$ git commit -m " Fix wrong condition in makeBigStringFrom"
+[bug2 f97fa59]  Fix wrong condition in makeBigStringFrom
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (bug2)
+$ git checkout bug1
+Switched to branch 'bug1'
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (bug1)
+$ git add SILab1Main.java
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (bug1)
+$ git commit -m " Call method filterOddLengthStrings in main class"
+On branch bug1
+nothing to commit, working tree clean
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (bug1)
+$ git add SILab1Main.java
+warning: in the working copy of 'SILab1Main.java', LF will be replaced by CRLF the next time Git toches it
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (bug1)
+$ git commit -m " Call method filterOddLengthStrings in main class"
+[bug1 6838d6a]  Call method filterOddLengthStrings in main class
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (bug1)
+$ git checkout bug2
+Switched to branch 'bug2'
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (bug2)
+$
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (bug2)
+$ git add SILab1Main.java
+warning: in the working copy of 'SILab1Main.java', LF will be replaced by CRLF the next time Git toches it
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (bug2)
+$ git commit -m "Call method makeBigStringFrom in main class"
+[bug2 644ce0d] Call method makeBigStringFrom in main class
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (bug2)
+$ git push origin bug2
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 993 bytes | 993.00 KiB/s, done.
+Total 9 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (5/5), completed with 3 local objects.
+remote:
+remote: Create a pull request for 'bug2' on GitHub by visiting:
+remote:      https://github.com/teddtsx/SI_2024_lab1_181271/pull/new/bug2
+remote:
+To https://github.com/teddtsx/SI_2024_lab1_181271.git
+ * [new branch]      bug2 -> bug2
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (bug2)
+$ git checkout bug1
+Switched to branch 'bug1'
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (bug1)
+$ git push origin bug1
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 390 bytes | 390.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'bug1' on GitHub by visiting:
+remote:      https://github.com/teddtsx/SI_2024_lab1_181271/pull/new/bug1
+remote:
+To https://github.com/teddtsx/SI_2024_lab1_181271.git
+ * [new branch]      bug1 -> bug1
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (bug1)
+$ git checkout master
+Switched to branch 'master'
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (master)
+$ git merge bug1
+Updating 58f82bd..6838d6a
+Fast-forward
+ SILab1Main.java | 3 ++-
+ SILab1_1.java   | 2 +-
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (master)
+$ git push origin master
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/teddtsx/SI_2024_lab1_181271.git
+   58f82bd..6838d6a  master -> master
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (master)
+$ git pull
+
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (master)
+$ git checkout bug2
+Switched to branch 'bug2'
+
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (bug2)
+$ git rebase master
+Auto-merging SILab1Main.java
+CONFLICT (content): Merge conflict in SILab1Main.java
+error: could not apply 644ce0d... Call method makeBigStringFrom in main class
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply 644ce0d... Call method makeBigStringFrom in main class
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (bug2|REBASE 2/2)
+$ git rebase --continue
+SILab1Main.java: needs merge
+You must edit all merge conflicts and then
+mark them as resolved using git add
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (bug2|REBASE 2/2)
+$ git diff --check
+SILab1Main.java:16: leftover conflict marker
+SILab1Main.java:18: leftover conflict marker
+SILab1Main.java:20: leftover conflict marker
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (bug2|REBASE 2/2)
+$ git rebase master
+fatal: It seems that there is already a rebase-merge directory, and
+I wonder if you are in the middle of another rebase.  If that is the
+case, please try
+        git rebase (--continue | --abort | --skip)
+If that is not the case, please
+        rm -fr ".git/rebase-merge"
+and run me again.  I am stopping in case you still have something
+valuable there.
+
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (bug2|REBASE 2/2)
+$ git add SILab1Main.java
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (bug2|REBASE 2/2)
+$ git rebase --continue
+[detached HEAD b8d7017] Call method makeBigStringFrom in main class
+ 1 file changed, 1 insertion(+)
+Successfully rebased and updated refs/heads/bug2.
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (bug2)
+$ git checkout master
+Switched to branch 'master'
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (master)
+$ git merge bug2
+Updating 6838d6a..b8d7017
+Fast-forward
+ SILab1Main.java | 1 +
+ SILab1_2.java   | 2 +-
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (master)
+$ git push origin master
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 689 bytes | 689.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
+To https://github.com/teddtsx/SI_2024_lab1_181271.git
+   6838d6a..b8d7017  master -> master
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (master)
+$ git checkout bug2
+Switched to branch 'bug2'
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (bug2)
+$ git push origin bug2
+To https://github.com/teddtsx/SI_2024_lab1_181271.git
+ ! [rejected]        bug2 -> bug2 (non-fast-forward)
+error: failed to push some refs to 'https://github.com/teddtsx/SI_2024_lab1_181271.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (bug2)
+$ git push origin bug2 --force
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/teddtsx/SI_2024_lab1_181271.git
+ + 644ce0d...b8d7017 bug2 -> bug2 (forced update)
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (bug2)
+$ git checkout bug1
+Switched to branch 'bug1'
+
+teodo@DESKTOP-35L894O MINGW64 /d/Fakultet/SI_2024_lab1_181271 (bug1)
+$ git push origin bug1 --force
+Everything up-to-date

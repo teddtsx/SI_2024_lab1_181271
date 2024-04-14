@@ -1,0 +1,89 @@
+$ git remote add origin https://github.com/teddtsx/SI_2024_lab1_181271.git -dodavanje remote repositorium
+$ git init -inicializacija
+$ git remote add origin https://github.com/teddtsx/SI_2024_lab1_181271.git -dodavanje remote repositorium
+$ git brach -M master -greshka pri pishuvanje
+$ git branch -M master -kreiranje na granka master
+$ echo "# Teodor Cvetkovski 181271" >> README.md -zapishuvanje na readme fajlot
+$ git add . -dodavanje na repoto site novo dodadeni promeni
+$ git commit -m "initial commit" -prviot commit
+$ git add . -dodavanje na site novo napraveni promeni
+$ git commit -m "Add starter code" - vtor commit
+$ git push origin master -sinhronizacija so glavnata grancka
+$ git add . -dodavanje na site novo napraveni promeni
+$ git reset -brishenje na posledniot chekor
+$ git branch -b bug1 -obid za kreiranje na granka
+$ git branch bug1 -pravilniot nachin za kreiranje na granka
+$ git checkout bug1 -prefrluvanje na taa granka
+$ git add SILab1_1.java -dodavanje na promenite od toj fajl
+$ git commit -m "Fix wrong condition in filterOddLengthStrings" -commit za taa promena
+$ git branch bug2 -kreiranje na nova granka
+$ git checkout bug2 -prefrluvanje na taa granka
+$ git add SILab1_2.java --dodavanje na promenite od toj fajl
+$ git commit -m " Fix wrong condition in makeBigStringFrom" -commit za taa promena
+$ git checkout bug1 -prefrluvanje na taa granka
+$ git add SILab1Main.java -dodavanje na promenite od toj fajl
+$ git commit -m " Call method filterOddLengthStrings in main class" -commit za taa promena
+$ git add SILab1Main.java-dodavanje na promenite od toj fajl
+$ git commit -m " Call method filterOddLengthStrings in main class"-commit za taa promena
+$ git checkout bug2 -prefluvanje na taa granka
+$ git add SILab1Main.java -dodavanje na promenite od toj fajl
+$ git commit -m "Call method makeBigStringFrom in main class" -commit za taa promena
+$ git push origin bug2 -sinhronizacija so taa granka 
+$ git checkout bug1 --prefrluvanje na taa granka
+$ git push origin bug1 -sinhronizacija so taa granka
+$ git checkout master -prefrluvanje na taa grank
+$ git merge bug1 -spojuvanje na dve granki
+$ git push origin master  -sinhronizacija so taa granka
+$ git pull -prevzemanje na site dotogashni promeni
+$ git checkout bug2 -prefrluvanje na taa granka
+$ git rebase master -site promneni od edna granka se prefrlaat na druga granka
+$ git rebase --continue 
+$ git diff --check -proverka na razliki
+$ git rebase master -site promneni od edna granka se prefrlaat na druga granka
+$ git add SILab1Main.java -dodavanje na promenite od toj fajl
+$ git rebase --continue 
+$ git checkout master -prefrluvanje na taa granka 
+$ git merge bug2 -spojuvanje na grankite
+$ git push origin master -sinhronizacija so taa granka
+$ git checkout bug2 -prefrluvanje na taa granka
+$ git push origin bug2 -sinhronizacija so taa granka
+$ git push origin bug2 --force
+$ git checkout bug1 -prefrluvanje na taa granka
+$ git push origin bug1 --force
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
